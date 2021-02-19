@@ -16,19 +16,40 @@
     padding: 0.4rem;
 }
 
-.main-editor {
+html {
     background: rgba(0, 0, 0, 0.91);
-    display: flex;
+}
+
+.main-editor {
     width: 100%;
     padding: 1rem;
-    height:100vh;
+    height:100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     border: 7px solid #36383f;
 }
 
 .editor-container {
-    width: 49%;
+    flex-basis: 49%;
+}
+
+.result-container {
+    flex-basis: 49%;
+}
+
+/* mobile phone */
+@media all and (max-width: 768px) {
+    .main-editor {
+        flex-wrap: wrap;
+    }
+    .editor-container {
+        flex-basis: 100%;
+    }
+    .result-container {
+        flex-basis: 100%;
+        margin-top: 25px;
+    }
 }
 
 .editor {
@@ -49,10 +70,6 @@
     overflow-y: auto;
     height: 20vh;
     padding-top: 10px;
-}
-
-.result-container {
-    width: 49%;
 }
 
 .result {
