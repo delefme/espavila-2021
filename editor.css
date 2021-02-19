@@ -28,7 +28,7 @@
 }
 
 .editor-container {
-    width: 48%;
+    width: 49%;
 }
 
 .editor {
@@ -48,10 +48,11 @@
     color: white;
     overflow-y: auto;
     height: 20vh;
+    padding-top: 10px;
 }
 
 .result-container {
-    width: 48%;
+    width: 49%;
 }
 
 .result {
