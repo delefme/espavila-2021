@@ -31,11 +31,11 @@ html {
 }
 
 .editor-container {
-    flex-basis: 49%;
+    width: 49%;
 }
 
 .result-container {
-    flex-basis: 49%;
+    width: 49%;
 }
 
 /* mobile phone */
@@ -44,10 +44,10 @@ html {
         flex-wrap: wrap;
     }
     .editor-container {
-        flex-basis: 100%;
+        width: 100%;
     }
     .result-container {
-        flex-basis: 100%;
+        width: 100%;
         margin-top: 25px;
     }
 }
