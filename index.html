@@ -1,7 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>My First heading</h1>
-    <p>My first paragraph.</p>
-  </body>
-</html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet"  href="editor.css">
+  <title>Editor HTML</title>
+</head>
+<body>
+    <div class="main-editor">
+      <div class="editor-container">
+        <div class="editor" contenteditable></div>
+        <div class="explanation"></div>
+        <button class="btn">Envia</button>
+      </div>
+      <div class="result-container">
+        <iframe class="result"></iframe>
+      </div>
+    </div>
+    <script src="editor.js"></script>
+</body>
+</html>
