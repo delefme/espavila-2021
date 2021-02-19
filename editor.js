@@ -14,6 +14,7 @@ loadContent = (what, where) => {
         .then(response => response.text())
         .then((data) => {
             where.textContent = data;
+            modifyCode();
         });
 };
 
@@ -29,5 +30,4 @@ editor.addEventListener("paste", function(e) {
 window.onload = () => {
     loadContent('1.html', editor);
     loadContent('1.txt', explanation);
-    modifyCode();
 };
