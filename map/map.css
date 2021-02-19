@@ -1,0 +1,59 @@
+.map {
+    margin: 0;
+    padding: 0;   
+    width: 100%;
+    height: 95vh;
+
+    overflow-x: auto;
+    display: flex;
+
+    background-color: #246175;
+}
+
+.division {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.separation {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.island {
+    padding: 50px;
+    border-radius: 50%;
+    background-color: #FFB775;
+    color: white;
+}
+
+.island.visited {
+    background-color: #A0522D;
+}
+
+.island:hover {
+    cursor: pointer;
+    border: solid 3px #D2691E;
+}
+
+.island.current::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    left: 40px;
+    bottom: 40px;
+    background-image: url('https://i.pinimg.com/originals/ef/aa/c5/efaac5ddee7f47e7e99bd0d2c53734dd.png');
+    background-size: contain;
+}
