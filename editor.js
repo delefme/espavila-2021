@@ -9,6 +9,14 @@ modifyCode = () => {
     result.src = prefix + encodeURI(content);
 };
 
+loadContent = (what, where) => {
+    fetch('./presets/' + what)
+        .then(response => response.text())
+        .then((data) => {
+            where.textContent = data;
+        });
+};
+
 btn.addEventListener("click", modifyCode);
 editor.addEventListener('keyup', modifyCode);
 
@@ -18,16 +26,8 @@ editor.addEventListener("paste", function(e) {
     document.execCommand("insertText", false, text);
 });
 
-fetch('./presets/1.html')
-    .then(response => response.text())
-    .then((data) => {
-        console.log(data);
-        editor.textContent = data;
-    });
-
-fetch('./presets/1.txt')
-    .then(response => response.text())
-    .then((data) => {
-        console.log(data);
-        explanation.textContent = data;
-    });
+window.onload = () => {
+    loadContent('1.html', editor);
+    loadContent('1.txt', explanation);
+    modifyCode();
+};
