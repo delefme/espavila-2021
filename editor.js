@@ -7,11 +7,9 @@ const urlParams = new URLSearchParams(window.location.search);
 const folder_num = urlParams.get('folder');
 const part_num = urlParams.get('part');
 
-validateCode = () => {
-    let h2 = result.getElementsByTagName("h2")[0];
-    let name = h2.textContent;
-    alert('Hola, ' + name + '!');
-};
+let valpath = './presets/' + folder_num + '/' + part_num + 'v.js';
+
+let validateCode = validateCodes[0];
 
 modifyCode = () => {
     let content = editor.textContent;
