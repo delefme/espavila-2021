@@ -28,6 +28,6 @@ editor.addEventListener("paste", function(e) {
 });
 
 window.onload = () => {
-    loadContent('1.html', editor);
-    loadContent('1.txt', explanation);
+    loadContent('1d.html', editor);
+    loadContent('1x.html', explanation);
 };
