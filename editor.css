@@ -66,7 +66,7 @@ html {
 }
 
 .explanation {
-    color: white;
+    color: black;
     overflow-y: auto;
     height: 20vh;
     padding-top: 10px;

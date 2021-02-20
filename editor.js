@@ -7,6 +7,13 @@ const urlParams = new URLSearchParams(window.location.search);
 const folder_num = urlParams.get('folder');
 const part_num = urlParams.get('part');
 
+validateCode = () => {
+    let resdoc = result.contentWindow.document;
+    let h2 = resdoc.getElementsByTagName("h2")[0];
+    let name = h2.textContent;
+    alert('Hola, ' + name + '!');
+};
+
 modifyCode = () => {
     let content = editor.textContent;
     let prefix = "data:text/html;charset=utf-8,";
@@ -26,7 +33,7 @@ loadContent = (where, html) => {
         });
 };
 
-btn.addEventListener("click", modifyCode);
+btn.addEventListener("click", validateCode);
 editor.addEventListener('keyup', modifyCode);
 
 editor.addEventListener("paste", function(e) {
