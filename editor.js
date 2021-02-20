@@ -8,16 +8,14 @@ const folder_num = urlParams.get('folder');
 const part_num = urlParams.get('part');
 
 validateCode = () => {
-    let resdoc = result.contentWindow.document;
-    let h2 = resdoc.getElementsByTagName("h2")[0];
+    let h2 = result.getElementsByTagName("h2")[0];
     let name = h2.textContent;
     alert('Hola, ' + name + '!');
 };
 
 modifyCode = () => {
     let content = editor.textContent;
-    let prefix = "data:text/html;charset=utf-8,";
-    result.src = prefix + encodeURI(content);
+    result.innerHTML = content;
 };
 
 loadContent = (where, html) => {
