@@ -9,11 +9,12 @@ modifyCode = () => {
     result.src = prefix + encodeURI(content);
 };
 
-loadContent = (what, where) => {
+loadContent = (what, where, html) => {
     fetch('./presets/' + what)
         .then(response => response.text())
         .then((data) => {
-            where.textContent = data;
+            if (html) where.innerHTML = data;
+            else where.textContent = data;
             modifyCode();
         });
 };
@@ -28,6 +29,6 @@ editor.addEventListener("paste", function(e) {
 });
 
 window.onload = () => {
-    loadContent('1d.html', editor);
-    loadContent('1x.html', explanation);
+    loadContent('1d.html', editor, false);
+    loadContent('1x.html', explanation, true);
 };
